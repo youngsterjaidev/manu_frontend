@@ -33,7 +33,7 @@ class App extends React.Component {
   async componentDidMount() {
     const username = rug.generate();
     try {
-      const response = await axios.post('http://localhost:5500/join', {
+      const response = await axios.post('https://chatbackend1220.herokuapp.com/join', {
         username,
       });
       const { token } = response.data;
@@ -61,7 +61,7 @@ class App extends React.Component {
             if (user.me.id !== event.user.id) {
               try {
                 const response = await axios.post(
-                  'http://localhost:5500/translate',
+                  'https://chatbackend1220.herokuapp.com/translate',
                   {
                     text: event.message.text,
                     lang: this.state.language,
