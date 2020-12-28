@@ -32,6 +32,7 @@ class App extends React.Component {
 
   async componentDidMount() {
     const username = rug.generate();
+    console.log(username)
     try {
       const response = await axios.post('https://chatbackend1220.herokuapp.com/join', {
         username,
