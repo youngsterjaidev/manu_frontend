@@ -37,6 +37,9 @@ class App extends React.Component {
       const response = await axios.post('https://chatbackend1220.herokuapp.com/join', {
         username,
       });
+      console.log(response)
+      console.log(response.data)
+      console.log(response.data.api_key)
       const { token } = response.data;
       const apiKey = response.data.api_key;
 
